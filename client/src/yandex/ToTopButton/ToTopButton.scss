@@ -1,0 +1,29 @@
+.toTopBtn_button_wrapper {
+    position: sticky;
+
+    top: 100px;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+
+    &.d-hide {
+        transition: all 1s ease-in-out;
+        opacity: 0;
+    }
+
+    &.simplePosition {
+        position: static;
+    }
+}
+
+
+
+
+.toTopButton {
+    position: absolute;
+
+    left: -60px;
+
+    &.simplePosition {
+        position: static;
+    }
+}

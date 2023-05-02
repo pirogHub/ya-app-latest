@@ -1,0 +1,25 @@
+.table_list {}
+
+
+.debugWindow_wrapper {
+    position: sticky;
+    display: flex;
+    justify-content: flex-end;
+    top: 100px;
+}
+
+.debugWindow {
+    position: absolute;
+    right: -100px;
+    background-color: #ccc;
+}
+
+.FiltersEmptyResilt_Message {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    gap: 7px;
+}

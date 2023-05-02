@@ -1,0 +1,39 @@
+.SectionItem {
+    // box-shadow: 0 0 20px 10px rgba(0, 0, 0, .2);
+    background-color: #fff;
+    padding: 10px;
+    // margin-block: 5px;
+
+    border: 1px solid #ccc;
+    border-radius: 20px;
+
+    & p {
+        line-height: 1.5;
+    }
+}
+
+.SectionItem__title {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+
+    & .circle {
+
+        width: 5px;
+        height: 5px;
+        background: #000;
+        color: #000;
+        border-radius: 50%;
+        transform: translateY(30%);
+        margin-right: 10px;
+    }
+}
+
+.SectionItem__content {
+    padding-left: 20px;
+}
+
+.SectionItem__body {
+    padding-left: 20px;
+}

@@ -1,0 +1,52 @@
+.MainLayout__content {}
+
+.MainLayout__Theme {
+    &.MainLayout__Theme-dark {
+        background-color: #000;
+    }
+}
+
+.MainLayout {
+    max-width: 1260px;
+    min-width: 960px;
+    margin: auto;
+    box-sizing: border-box;
+    padding-inline: 10px;
+
+}
+
+.SuperUltraNavBar_Wrapper {}
+
+.normalNavBar {}
+
+.AbsoluteError__wrapper {
+    position: sticky;
+    z-index: 20;
+    top: 50px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    & .AbsoluteError {
+        padding: 10px;
+        padding-inline: 15px;
+        padding-right: 50px;
+        box-sizing: border-box;
+
+
+        min-width: 200px;
+        outline: 2px solid #035d0c;
+
+
+        background-color: #09bb1a;
+
+        &.warning {
+            background-color: #f3cc06;
+        }
+
+        &.error {
+            background-color: #f31e06;
+            color: #fff;
+        }
+    }
+}

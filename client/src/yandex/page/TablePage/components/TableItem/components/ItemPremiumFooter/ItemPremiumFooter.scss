@@ -1,0 +1,17 @@
+.premium-footer {
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    text-decoration: none;
+
+    transition: all .8s ease;
+
+    &:hover {
+        color: #f33;
+        text-decoration: underline;
+        transition: all 0.5s ease;
+    }
+
+}

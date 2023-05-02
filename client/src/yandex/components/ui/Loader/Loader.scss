@@ -1,0 +1,209 @@
+.lds-roller-sizeWrapper {
+    display: flex;
+    width: 100&;
+    justify-content: center;
+
+}
+
+.b {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lds-roller-wrapper {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+
+
+
+
+    padding-right: 10px;
+    margin-inline: 5px;
+
+}
+
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+.lds-roller div {
+    position: absolute;
+
+
+
+
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+
+    transform-origin: center;
+
+    height: 100%;
+    width: 100%;
+
+}
+
+.lds-roller div:after {
+    content: "";
+    display: block;
+    position: absolute;
+
+
+    width: 8.75%;
+    height: 8.75%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.5);
+    margin: -4px 0 0 -4px;
+    margin: auto;
+
+
+
+
+}
+
+.lds-roller_green div:after {
+    background: rgba(5, 163, 18, 0.5);
+}
+
+.lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+
+    top: 78.75%;
+
+    left: 78.75%;
+
+}
+
+.lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+
+    top: 85%;
+
+    left: 70%;
+}
+
+.lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+
+    top: 88.75%;
+
+    left: 60%;
+}
+
+.lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+
+    top: 90%;
+
+    left: 50%;
+}
+
+.lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+
+    top: 88.75%;
+
+    left: 40%;
+}
+
+.lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+
+    top: 85%;
+
+    left: 30%;
+}
+
+.lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+
+    top: 78.75%;
+
+    left: 21.25%;
+}
+
+.lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+
+    top: 70%;
+
+    left: 15%;
+}
+
+@keyframes lds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

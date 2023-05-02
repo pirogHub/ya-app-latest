@@ -1,0 +1,137 @@
+.Auth__wrapper {
+    position: sticky;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-inline: 20px;
+    width: 90%;
+    background-color: #32272700;
+
+    transition: background-color .3s ease;
+
+    &.beautiful {
+        transition: background-color .9s ease-out;
+        background-color: #32272759;
+
+        & input {
+            background-color: #fff;
+        }
+    }
+}
+
+.Auth__loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    border-radius: inherit;
+    padding: 10px;
+    box-sizing: border-box;
+
+    &>*:not(.Auth__loader-blur) {
+        z-index: 11;
+    }
+
+    & .Auth__loader-shadower {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9;
+        border-radius: inherit;
+        background-color: rgba(0, 0, 0, .2);
+    }
+}
+
+.Auth__LoginByTestAcc__wrapper {
+
+    position: relative;
+}
+
+.Auth__form {}
+
+.Auth__blurer {
+
+    -webkit-filter: blur(0);
+    filter: blur(0);
+
+
+    &.blured {
+
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+        -webkit-transition: 2s ease-in-out;
+        transition: all 2s ease-in-out;
+    }
+}
+
+
+.Auth__form__main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &>* {
+        margin-top: 0;
+    }
+}
+
+.Auth__LoginByTestAcc {
+    cursor: default !important;
+    top: 15px;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    width: auto;
+    height: auto;
+    align-items: stretch;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 12px 1px rgb(241, 221, 2);
+
+    & button {
+        color: #000;
+    }
+}
+
+
+.Auth__actionsWrapper {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+
+    &>* {
+        flex: 1;
+    }
+
+}
+
+.Auth__shadower {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    transition: all .3s ease;
+
+    &.beautiful {
+        transition: all 1s ease-in-out;
+        background-color: #000000cd;
+        box-shadow: 0 0 20px 20px #000000cd;
+    }
+}

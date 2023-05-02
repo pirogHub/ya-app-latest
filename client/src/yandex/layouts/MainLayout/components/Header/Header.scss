@@ -1,0 +1,35 @@
+.Header__wrapper {
+    position: relative;
+}
+
+.Header__content-wrapper {
+    max-width: 85%;
+    margin: auto;
+    z-index: 3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &.absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.Header__banner-wrapper {}
+
+.Header__usefullContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.img__plug {
+    padding: 10px;
+    background-color: #444;
+    border-radius: inherit;
+}

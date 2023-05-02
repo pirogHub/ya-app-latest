@@ -1,0 +1,11 @@
+.meta {
+
+    box-sizing: border-box;
+
+    align-items: center;
+    display: flex;
+
+    & a {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,59 @@
+.Edit__warning-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.offer-form__right {
+
+    margin-top: 13px;
+
+}
+
+
+
+.offer-form__left {
+    width: 90%;
+}
+
+
+.offer-form {
+    width: 70%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.error-wrapper {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    font-style: italic;
+    color: #f33;
+    width: 100%;
+    padding-inline: 2px;
+}
+
+.AddOfferPage__loader-wrapper {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+
+    & .loader-content {
+
+        margin: auto;
+        height: 286px;
+    }
+}
