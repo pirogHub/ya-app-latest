@@ -6,7 +6,7 @@ const ServerImg = ({ src, isDebug, ...rest }) => {
     const [changedSrc, setChangedSrc] = useState("")
 
     useEffect(() => {
-        if (isDebug) onsole.log("============");
+        if (isDebug) console.log("============");
         if (isDebug) console.log("typeof src", typeof src);
         if (isDebug) console.log("src", src);
 
