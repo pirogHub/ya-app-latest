@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import config from "../../config.json"
+import config from "../../../config.json"
 
 const ServerImg = ({ src, ...rest }) => {
 

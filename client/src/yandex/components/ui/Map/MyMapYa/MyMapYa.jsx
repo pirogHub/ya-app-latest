@@ -2,7 +2,7 @@ import React from "react";
 
 import { YMaps, Map, SearchControl, Placemark } from "@pbe/react-yandex-maps";
 import mySuperValidator from "../../../../utils/mySuperValidator";
-
+import config from "../../../../../config.json"
 import "./MyMapYa.scss"
 
 
