@@ -20,7 +20,7 @@ const BallonBody = ({ offerTitle, priceLabel, firstImg, author }) => {
     let newSrc = firstImg
     if (typeof newSrc === "string") {
 
-        newSrc = currentFirstImg.replace("http://89.108.76.206/api", config.apiEndpoint)
+        newSrc = newSrc.replace("http://89.108.76.206/api", config.apiEndpoint)
         newSrc = newSrc.replace("http://89.108.76.206/api", `${config.img_server_string}/api`)
         newSrc = newSrc.replace("api/api", 'api/')
     }
