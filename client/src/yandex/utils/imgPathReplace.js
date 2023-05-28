@@ -1,3 +1,5 @@
+import config from "../../config.json"
+
 export const imgPathReplace = (src) => {
     if (typeof src === "string") {
 
