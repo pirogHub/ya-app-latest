@@ -1,4 +1,5 @@
 {
     "apiEndpoint_local": "http://localhost:8080/api",
-    "apiEndpoint": "http://89.108.76.206/api"
+    "apiEndpoint_old": "http://89.108.76.206/api",
+    "apiEndpoint": "https://ya-app.onrender.com"
 }
