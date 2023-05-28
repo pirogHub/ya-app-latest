@@ -17,10 +17,13 @@ const BallonHeader = ({ offerTitle, userId, priceLabel, firstImg, author }) => {
 
 const BallonBody = ({ offerTitle, priceLabel, firstImg, author }) => {
     // const currentFirstImg = 'https://mykaleidoscope.ru/uploads/posts/2021-03/1615552544_48-p-kvartira-v-neboskrebe-52.jpg" alt="Loading..." height="150" width="200>'
-    const currentFirstImg = firstImg
-    let newSrc = currentFirstImg.replace("http://89.108.76.206/api", config.apiEndpoint)
-    newSrc = newSrc.replace("http://89.108.76.206/api", `${config.img_server_string}/api`)
-    newSrc = newSrc.replace("api/api", 'api/')
+    let newSrc = firstImg
+    if (typeof newSrc === "string") {
+
+        newSrc = currentFirstImg.replace("http://89.108.76.206/api", config.apiEndpoint)
+        newSrc = newSrc.replace("http://89.108.76.206/api", `${config.img_server_string}/api`)
+        newSrc = newSrc.replace("api/api", 'api/')
+    }
     return `
 
          <img src="${newSrc}" alt="Loading..." height="150" width="200"> <br/> 
