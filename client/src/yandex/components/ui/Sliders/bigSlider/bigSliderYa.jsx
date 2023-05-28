@@ -123,7 +123,7 @@ const BigSliderYa = ({ images, imagesPlan, onBottomButtonsClick }) => {
                         {photosSaved.map((i, idx) => (
                             <div className="gallery__slide gallery__slideWithSnapScroll gallerySlide__imageWrapper gallerySlide__planWrapper" key={idx}>
                                 {/* <img alt="" className="gallerySlide__wrappedImage" src={i?.myBlob ? i.myBlob : i} /> */}
-                                <ServerImg isDebug alt="" className="gallerySlide__wrappedImage" src={i?.myBlob ? i.myBlob : i} />
+                                <ServerImg isDebug={true} alt="" className="gallerySlide__wrappedImage" src={i?.myBlob ? i.myBlob : i} />
                             </div>
                         ))}
 
