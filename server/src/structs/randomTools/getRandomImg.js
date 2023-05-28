@@ -23,8 +23,8 @@ const alreadyFetchedRandomImgs = {
 
 
 const debug_log_getRandomImg = false
-// const SERVER_URL = process.env.SERVER_URL
-const SERVER_URL = config.get('serverUrl')
+const SERVER_URL = process.env.SERVER_URL
+// const SERVER_URL = config.get('serverUrl')
 
 const getRandomImg = async (type = "photos", getOne = false) => {
 

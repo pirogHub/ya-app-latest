@@ -16,8 +16,8 @@ app.use(cors())
 app.use('/api', logger, routes)
 
 // console.log(process.env);
-const PORT = config.get('port') ?? 8080
-// const PORT = process.env.PORT ?? 8080
+// const PORT = config.get('port') ?? 8080
+const PORT = process.env.PORT ?? 8080
 
 if (process.env.NODE_ENV === "development") {
     console.log("app.js development");
@@ -41,8 +41,8 @@ async function start() {
 
 
 
-        // await mongoose.connect(process.env.MONGO_URI)
-        await mongoose.connect(config.get('mongoUri'))
+        await mongoose.connect(process.env.MONGO_URI)
+        // await mongoose.connect(config.get('mongoUri'))
         console.log(chalk.green("MongoDb connected."));
         app.listen(PORT, () => {
             console.log(chalk.green(`Server has been started on ${PORT}...`));

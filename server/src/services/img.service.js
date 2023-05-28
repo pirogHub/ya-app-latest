@@ -3,8 +3,8 @@ const Avatar = require("../models/Avatar")
 const fs = require("fs");
 const config = require("config")
 
-// const SERVER_URL = process.env.SERVER_URL
-const SERVER_URL = config.get('serverUrl')
+const SERVER_URL = process.env.SERVER_URL
+// const SERVER_URL = config.get('serverUrl')
 
 
 const IMGModels_VARIABLES = {

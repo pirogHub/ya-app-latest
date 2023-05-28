@@ -23,8 +23,8 @@ const config = require("config")
 
 const router = express.Router({ mergeParams: true })
 
-// const SERVER_URL = process.env.SERVER_URL
-const SERVER_URL = config.get('serverUrl')
+const SERVER_URL = process.env.SERVER_URL
+// const SERVER_URL = config.get('serverUrl')
 
 ///массив-лист для вырезания индексов уже полученных фото
 const indexesArr = []

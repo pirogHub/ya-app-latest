@@ -8,10 +8,10 @@ const stringTime = `${time}ms`
 const debug_log_TokenService = false
 
 
-// const ACCESS_SECRET = process.env.ACCESS_SECRET
-const ACCESS_SECRET = config.get('accessSecret')
-// const REFRESH_SECRET = process.env.REFRESH_SECRET
-const REFRESH_SECRET = config.get('refreshSecret')
+const ACCESS_SECRET = process.env.ACCESS_SECRET
+// const ACCESS_SECRET = config.get('accessSecret')
+const REFRESH_SECRET = process.env.REFRESH_SECRET
+// const REFRESH_SECRET = config.get('refreshSecret')
 
 
 class TokenService {
