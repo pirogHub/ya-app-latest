@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import config from "../../../config.json"
 
 const ServerImg = ({ src, ...rest }) => {
