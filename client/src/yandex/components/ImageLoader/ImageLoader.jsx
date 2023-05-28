@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import ServerImg from "../ServerImg/ServerImg";
+import { imgPathReplace } from "../../utils/imgPathReplace";
 
 const ImageLoader = ({ className, onLoaded, link, children, whenBadFetchComponent, ...rest }) => {
     const [url, setUrl] = useState(null);
     useEffect(() => {
         if (!link || url) { return }
 
-        fetch(link)
+        fetch(imgPathReplace(link))
             .then(response => response.blob())
             .then((image) => {
                 setUrl(URL.createObjectURL(image));

@@ -4,6 +4,7 @@ import "../sliders.scss"
 import "./bigSliderYa.scss"
 import { useAllWindowSlider } from "../useAllWindowSlider"
 import ServerImg from "../../../ServerImg/ServerImg"
+import { imgPathReplace } from "../../../../utils/imgPathReplace"
 
 const BigSliderYa = ({ images, imagesPlan, onBottomButtonsClick }) => {
 
@@ -24,7 +25,7 @@ const BigSliderYa = ({ images, imagesPlan, onBottomButtonsClick }) => {
             await contentArr.forEach(async (mylink, index) => {
                 let imgsaved = ""
                 try {
-                    const response = await fetch(mylink)
+                    const response = await fetch(imgPathReplace(mylink))
 
 
                     const imgblob = await response.blob()
