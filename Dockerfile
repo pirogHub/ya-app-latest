@@ -24,6 +24,6 @@ COPY server /app
 COPY --from=client /app/client/build /app/client
 
 
-EXPOSE 8080
+EXPOSE 80
 
 CMD ["npm", "start"]
