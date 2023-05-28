@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react"
 import config from "../../../config.json"
 
-const ServerImg = ({ src, ...rest }) => {
+const ServerImg = ({ src, isDebug, ...rest }) => {
 
     const [changedSrc, setChangedSrc] = useState("")
 
     useEffect(() => {
-
-        console.log("typeof src", typeof src);
-        console.log("src", src);
+        if (isDebug) onsole.log("============");
+        if (isDebug) console.log("typeof src", typeof src);
+        if (isDebug) console.log("src", src);
 
         if (typeof src === "string") {
 
             let newSrc = src.replace("http://89.108.76.206/api", config.apiEndpoint)
-            console.log("newSrc", newSrc);
+            if (isDebug) console.log("newSrc", newSrc);
             newSrc = newSrc.replace(`${config.img_server_string}`, `${config.apiEndpoint}`)
-            console.log("newSrc", newSrc);
+            if (isDebug) console.log("newSrc", newSrc);
             newSrc = newSrc.replace("api/api", "/api")
-            console.log("newSrc", newSrc);
+            if (isDebug) console.log("newSrc", newSrc);
             setChangedSrc(newSrc)
         }
     }, [src])
