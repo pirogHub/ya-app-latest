@@ -46,6 +46,11 @@ async function start() {
         console.log(chalk.green("MongoDb connected."));
         app.listen(PORT, () => {
             console.log(chalk.green(`Server has been started on ${PORT}...`));
+            console.log(chalk.green(`Server env: NODE_ENV ${process.env.NODE_ENV}...`));
+            console.log(chalk.green(`Server env: MONGO_URI ${process.env.MONGO_URI}...`));
+            console.log(chalk.green(`Server env: ACCESS_SECRET ${process.env.ACCESS_SECRET}...`));
+            console.log(chalk.green(`Server env: REFRESH_SECRET ${process.env.REFRESH_SECRET}...`));
+            console.log(chalk.green(`Server env: SERVER_URL ${process.env.SERVER_URL}...`));
         })
 
     } catch (e) {
