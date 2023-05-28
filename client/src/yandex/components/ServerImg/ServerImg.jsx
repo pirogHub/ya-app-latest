@@ -14,9 +14,9 @@ const ServerImg = ({ src, ...rest }) => {
 
             let newSrc = src.replace("http://89.108.76.206/api", config.apiEndpoint)
             console.log("newSrc", newSrc);
-            newSrc = src.replace("http://89.108.76.206/api", `${config.img_server_string}/api`)
+            newSrc = newSrc.replace(`${config.img_server_string}`, `${config.apiEndpoint}`)
             console.log("newSrc", newSrc);
-            newSrc = src.replace("api/api", "/api")
+            newSrc = newSrc.replace("api/api", "/api")
             console.log("newSrc", newSrc);
             setChangedSrc(newSrc)
         }
