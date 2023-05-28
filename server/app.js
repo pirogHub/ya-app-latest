@@ -51,6 +51,7 @@ async function start() {
             console.log(chalk.green(`Server env: ACCESS_SECRET ${process.env.ACCESS_SECRET}...`));
             console.log(chalk.green(`Server env: REFRESH_SECRET ${process.env.REFRESH_SECRET}...`));
             console.log(chalk.green(`Server env: SERVER_URL ${process.env.SERVER_URL}...`));
+            console.log(chalk.green(`Server env: IMG_SERVER_STRING ${process.env.IMG_SERVER_STRING}...`));
         })
 
     } catch (e) {

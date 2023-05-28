@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 import MyLink from "../../ui/MyLink"
 import ImageLoader from "../../ImageLoader"
 import Loader from "../../ui/Loader"
+import ServerImg from "../../ServerImg/ServerImg"
 
 const LittleOfferCard = ({
     width,
@@ -38,7 +39,8 @@ const LittleOfferCard = ({
                 to={link}
             >
             </MyLink>
-            <img src={img} width={width ? width : "240px"} />
+            {/* <img src={img} width={width ? width : "240px"} /> */}
+            <ServerImg src={img} width={width ? width : "240px"} />
 
 
             <p><span>{nameLabel}</span><span>{name}</span></p>

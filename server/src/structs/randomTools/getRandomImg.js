@@ -23,7 +23,9 @@ const alreadyFetchedRandomImgs = {
 
 
 const debug_log_getRandomImg = false
-const SERVER_URL = process.env.SERVER_URL
+
+const IMG_SERVER_STRING = process.env.IMG_SERVER_STRING
+// const SERVER_URL = process.env.SERVER_URL
 // const SERVER_URL = config.get('serverUrl')
 
 const getRandomImg = async (type = "photos", getOne = false) => {
@@ -80,7 +82,9 @@ const getRandomImg = async (type = "photos", getOne = false) => {
 
 
             const name = alreadyFetchedRandomImgs[path].content[randomIdx]
-            const link = `${SERVER_URL}/api/img/random/${type}/${name}`
+            // const link = `${SERVER_URL}/api/img/random/${type}/${name}`
+            const link = `${IMG_SERVER_STRING}/api/img/random/${type}/${name}`
+
 
 
             if (!resultArr.includes(link)) resultArr.push(link)

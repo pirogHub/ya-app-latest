@@ -7,6 +7,7 @@ import "../../../../components/Cards/offerCard.scss"
 import { useFetchUser } from "../../../../hooks/useFetchUser/useFetchUser";
 import ItemAuthor from "../../../TablePage/components/TableItem/components/ItemAuthor";
 import MyLink from "../../../../components/ui/MyLink";
+import ServerImg from "../../../../components/ServerImg/ServerImg";
 const OfferAuthor = ({ author }) => {
 
 
@@ -40,7 +41,8 @@ const OfferAuthor = ({ author }) => {
                 <div className="OfferAuthor__wrapper">
                     < div className="OfferAuthor__ImageWrapper">
 
-                        <img className="OfferAuthor__image"
+                        {/* <img className="OfferAuthor__image" */}
+                        <ServerImg className="OfferAuthor__image"
 
                             src={author.avatarLink}
                         />

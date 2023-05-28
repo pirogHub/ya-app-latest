@@ -1,4 +1,5 @@
 
+import ServerImg from "../../../../../../components/ServerImg/ServerImg"
 import "./ItemAuthor.scss"
 const ItemAuthor = ({ author }) => {
 
@@ -7,7 +8,8 @@ const ItemAuthor = ({ author }) => {
             < div className="Author__wrapper">
                 <div className="Author">
                     <div className={"AuthorImage__image_wrapper" + (author.isDeveloper ? " developerLogo" : "")}>
-                        <img className="AuthorImage__image"
+                        {/* <img className="AuthorImage__image" */}
+                        <ServerImg className="AuthorImage__image"
                             alt={author?.userName}
                             src={author?.avatarLink}
                         />

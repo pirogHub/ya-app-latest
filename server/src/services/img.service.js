@@ -3,18 +3,22 @@ const Avatar = require("../models/Avatar")
 const fs = require("fs");
 const config = require("config")
 
-const SERVER_URL = process.env.SERVER_URL
+// const SERVER_URL = process.env.SERVER_URL
 // const SERVER_URL = config.get('serverUrl')
-
+const IMG_SERVER_STRING = process.env.IMG_SERVER_STRING
 
 const IMGModels_VARIABLES = {
     ImageModel: {
         mongoModel: allImgs,
-        path: `${SERVER_URL}/api/img`
+        path: `${IMG_SERVER_STRING}/api/img`
+        // path: `${SERVER_URL}/api/img`
+
     },
     AvatarModel: {
         mongoModel: Avatar,
-        path: `${SERVER_URL}/api/user/avatar`
+        path: `${IMG_SERVER_STRING}/api/user/avatar`
+        // path: `${SERVER_URL}/api/user/avatar`
+
     }
 }
 

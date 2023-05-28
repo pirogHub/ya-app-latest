@@ -4,6 +4,7 @@ import Loader from "../../ui/Loader/Loader";
 
 import "./photoCard.scss"
 import { useImgsUploader_LOADING_STATUS } from "../../../hooks/useImgsUploader/useImgsUploader";
+import ServerImg from "../../ServerImg/ServerImg";
 
 const OneControl = ({ onClick, iconTag }) => {
 
@@ -94,7 +95,8 @@ const PhotoCard = ({ little, deleteHandler, status, url, fileObj, myLink, fileId
             className={"PhotoCard" + (little ? " PhotoCard__little" : "")}
 
         >
-            <img className="PhotoCard_img" src={url ? url : myLink} />
+            {/* <img className="PhotoCard_img" src={url ? url : myLink} /> */}
+            <ServerImg className="PhotoCard_img" src={url ? url : myLink} />
             <div className={"PhotoCard__background-shadow" + (status === useImgsUploader_LOADING_STATUS.success ? " none" : "")} ></div>
             <StatusComponent status={status} />
 

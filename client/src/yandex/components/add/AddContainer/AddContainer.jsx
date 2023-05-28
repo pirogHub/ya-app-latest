@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 
 import "./AddContainer.scss"
+import ServerImg from "../../ServerImg/ServerImg"
 
 const AddContainer = ({ img, name, price }) => {
 
@@ -42,7 +43,8 @@ const AddContainer = ({ img, name, price }) => {
 
                 }
                 <div className={"AddContainer__content" + (showAddSettings ? " onSettings" : "")}>
-                    <img src={img} height="153px" />
+                    {/* <img src={img} height="153px" /> */}
+                    <ServerImg src={img} height="153px" />
                     <div>{name}</div>
                     <div>{price}</div>
                     <button className="btn btn-add">lalala</button>

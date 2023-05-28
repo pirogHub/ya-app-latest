@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ServerImg from "../ServerImg/ServerImg";
 
 const ImageLoader = ({ className, onLoaded, link, children, whenBadFetchComponent, ...rest }) => {
     const [url, setUrl] = useState(null);
@@ -19,7 +20,8 @@ const ImageLoader = ({ className, onLoaded, link, children, whenBadFetchComponen
 
     return <>
         {url
-            ? <img
+            ? < ServerImg
+                //  img
                 className={className ? ` ${className}` : ""}
                 src={url}
                 {...rest}

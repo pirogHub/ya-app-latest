@@ -8,6 +8,7 @@ import userService from "../../../../services/user.service";
 import { useDispatch } from "react-redux";
 import { ERROR_TYPES, setError } from "../../../../store/errors";
 import Loader from "../../../../components/ui/Loader";
+import ServerImg from "../../../../components/ServerImg/ServerImg";
 
 
 const StatusShowSuccess = <div className={"PhotoCard__loadingStatus PhotoCard__loadingStatus_Success"} >
@@ -121,7 +122,8 @@ const AvatarComponent = ({ isAuthUserPage, avatarLink }) => {
     return (
         <div className="UserAvatar-wrapper">
             <div className="UserAvatar_img_wrapper">
-                <img className="UserAvatar__avatar" src={avatarUrl ? avatarUrl : ""} alt="" />
+                {/* <img className="UserAvatar__avatar" src={avatarUrl ? avatarUrl : ""} alt="" /> */}
+                <ServerImg className="UserAvatar__avatar" src={avatarUrl ? avatarUrl : ""} alt="" />
                 <div className={"UserAvatar__loadingStatus"
                     + (status === useImgsUploader_LOADING_STATUS.pending ? " loading" : "")
                 }>

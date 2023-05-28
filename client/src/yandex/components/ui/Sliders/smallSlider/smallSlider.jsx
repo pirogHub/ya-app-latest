@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./smallSlider.scss"
 import "../sliders.scss"
+import ServerImg from "../../../ServerImg/ServerImg";
 
 const SmallSlider = ({ className, images, bottomImgs_flag, linkToOffer }) => {
 
@@ -46,7 +47,8 @@ const SmallSlider = ({ className, images, bottomImgs_flag, linkToOffer }) => {
         <Link to={linkToOffer} className={"gallery-link " + className} >
             <div className="gallery">
                 <div className="activeImg_wrapper">
-                    <img ref={refImg} src={images?.[curIdx]} />
+                    {/* <img ref={refImg} src={images?.[curIdx]} /> */}
+                    <ServerImg ref={refImg} src={images?.[curIdx]} />
                     <div ref={refActiveImgWrapper} className={"activeImg_background"} ></div>
                 </div>
                 <div className="bulletIndicator_wrapper">
@@ -73,7 +75,8 @@ const SmallSlider = ({ className, images, bottomImgs_flag, linkToOffer }) => {
                         Array.isArray(images) && images.slice(0, 4)
                             .map((i, idx) =>
                                 <li key={idx} className="gallery__item">
-                                    <img data-idx={idx} src={i} />
+                                    {/* <img data-idx={idx} src={i} /> */}
+                                    <ServerImg data-idx={idx} src={i} />
                                 </li>)
                     }
 
@@ -81,7 +84,10 @@ const SmallSlider = ({ className, images, bottomImgs_flag, linkToOffer }) => {
             </div>
             {bottomImgs_flag
                 ? <div className="bottom-imgs">
-                    {getBottomImgs(images).map((i, idx) => <img key={idx} src={i} />)}
+                    {getBottomImgs(images).map((i, idx) =>
+                        //  <img key={idx} src={i} />
+                        <ServerImg key={idx} src={i} />
+                    )}
                 </div>
                 : <></>}
         </Link>

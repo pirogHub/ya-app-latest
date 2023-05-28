@@ -5,6 +5,7 @@ import SliderShell from "../SliderShell/SliderShell"
 
 import "./useAllWindowSlider.scss"
 import SliderShellForAllWindowSlider from "../SliderShellForAllWindowSlider/SliderShellForAllWindowSlider"
+import ServerImg from "../../../ServerImg/ServerImg"
 
 
 const Control = ({ direction, onClick }) => {
@@ -74,7 +75,8 @@ const Slider = ({ contentArr, lastIndex, label, onImgChange, isGetImgToMainOnIni
             ref={refSlider}
             className="AllWindowSlider__bottomSlider">
             {contentArr && contentArr.map((p, index) =>
-                <img
+                <ServerImg
+                    // img
                     key={p?.myBlob ? p?.myBlob : p}
                     onClick={() => changeImg(index)}
                     className={

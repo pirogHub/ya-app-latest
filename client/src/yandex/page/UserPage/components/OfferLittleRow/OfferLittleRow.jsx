@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import "./OfferLittleRow.scss"
 import Loader from "../../../../components/ui/Loader";
 import MyLink from "../../../../components/ui/MyLink";
+import ServerImg from "../../../../components/ServerImg/ServerImg";
 const OfferLittleRow = ({ isAuthUserPage, index, offerLink, removeOffer }) => {
 
     const [offer, setOffer] = useState(null)
@@ -53,7 +54,8 @@ const OfferLittleRow = ({ isAuthUserPage, index, offerLink, removeOffer }) => {
                     className="OfferLittleRow__wrapper-link"
                 >
                     <div className="offerPublic">
-                        <img
+                        <ServerImg
+                            // {/* img */}
                             className="offer__img"
                             src={offer.firstImg} alt="" />
                         <div

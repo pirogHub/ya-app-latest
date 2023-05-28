@@ -23,7 +23,8 @@ const config = require("config")
 
 const router = express.Router({ mergeParams: true })
 
-const SERVER_URL = process.env.SERVER_URL
+const IMG_SERVER_STRING = process.env.IMG_SERVER_STRING
+// const SERVER_URL = process.env.SERVER_URL
 // const SERVER_URL = config.get('serverUrl')
 
 ///массив-лист для вырезания индексов уже полученных фото
@@ -219,7 +220,9 @@ router.get("/random/:type/:what/:randomNumFromReactClient?", async (req, res) =>
                         const name = alreadyFetchedRandomImgs[path].content[randomIdx]
 
                         if (what === "oneImg") what = name
-                        const link = `${SERVER_URL}/api/img/random/${type}/${name}`
+                        const link = `${IMG_SERVER_STRING}/api/img/random/${type}/${name}`
+                        // const link = `${SERVER_URL}/api/img/random/${type}/${name}`
+                        // const link = `/api/img/random/${type}/${name}`
 
                         resultArr.push(link)
 
@@ -295,7 +298,9 @@ router.post("/random/:type", async (req, res) => {
     try {
         const imgCreated = await curSchema.create(modalToUpload)
         console.log(`imgRandom.routes.js post:type random ${type}s uploaded`);
-        res.status(201).json({ link: `${SERVER_URL}/api/img/${curType}/${imgCreated.name}` })
+        res.status(201).json({ link: `${IMG_SERVER_STRING}/api/img/${curType}/${imgCreated.name}` })
+        // res.status(201).json({ link: `${SERVER_URL}/api/img/${curType}/${imgCreated.name}` })
+
 
         res.end()
     } catch (error) {

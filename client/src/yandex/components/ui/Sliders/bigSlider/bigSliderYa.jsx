@@ -3,6 +3,7 @@ import React, { createRef, useEffect, useRef, useState } from "react"
 import "../sliders.scss"
 import "./bigSliderYa.scss"
 import { useAllWindowSlider } from "../useAllWindowSlider"
+import ServerImg from "../../../ServerImg/ServerImg"
 
 const BigSliderYa = ({ images, imagesPlan, onBottomButtonsClick }) => {
 
@@ -121,7 +122,8 @@ const BigSliderYa = ({ images, imagesPlan, onBottomButtonsClick }) => {
 
                         {photosSaved.map((i, idx) => (
                             <div className="gallery__slide gallery__slideWithSnapScroll gallerySlide__imageWrapper gallerySlide__planWrapper" key={idx}>
-                                <img alt="" className="gallerySlide__wrappedImage" src={i?.myBlob ? i.myBlob : i} />
+                                {/* <img alt="" className="gallerySlide__wrappedImage" src={i?.myBlob ? i.myBlob : i} /> */}
+                                <ServerImg alt="" className="gallerySlide__wrappedImage" src={i?.myBlob ? i.myBlob : i} />
                             </div>
                         ))}
 
